@@ -1,0 +1,71 @@
+//CHIMWEMWE THAYO @BSC/24/18
+import java.util.Scanner;
+public class StudentProgramm {
+  public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter Name Of Student ");
+		String N = input.nextLine();
+		System.out.println("Enter the Three Grades ");
+		double grade1 = input.nextDouble();
+		double grade2 = input.nextDouble();
+		double grade3 = input.nextDouble();
+		System.out.println("Enter the total number of students ");
+		int z = input.nextInt();
+		
+	 printStudentDetails( N , grade1 ,  grade2 , grade3 , z);  
+ 
+  }
+  public static void printStudentDetails(String x , double d ,      double k , double i , int c) {
+	  Student student1 = new Student();
+		 Student.setName(x);
+		 Student.setNumberOfStudent(c);
+		 Student student2 = new Student();
+		 System.out.println("Student Name is "+Student.getName(x)+"  average grade  is " +Student.getAverageGrade(d , k , i)+ " "
+		 + "and the current numer of students is "	+ ""+Student.getNumberOfStudents(c)+"");
+		  
+	  
+  }
+}
+//CHIMWEMWE THAYO BSC/24/18
+public class Student {
+ private static String Name;
+ private static double Grades;
+ private static  int totalNumerOfStudents; 
+ 
+ public Student(){
+ }
+ public static void setName(String newName) {
+   Name = newName;
+		
+ }
+ public static String getName(String m) {
+	 return Name;
+	 
+ }
+ public static void setGrades() {
+
+ }
+ public static double getGrades() {
+	 return Grades;
+	 
+ }
+ public static void setNumberOfStudent(int c) {
+	 totalNumerOfStudents = c;	
+ }
+ public static int getNumberOfStudents(int l) {
+	 return totalNumerOfStudents;
+ }
+ public static double getAverageGrade(double grade1 , double grade2 ,double grade3) {
+	return (grade1 + grade2 + grade3)/3;
+	 
+	 
+	 
+ }
+ public void printStudentDetails() {
+	 
+	 
+ }
+
+}
+ 
+
